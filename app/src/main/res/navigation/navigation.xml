@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/sleepTrackerFragment">
+    app:startDestination="@id/sleep_tracker_fragment">
 
     <fragment
-        android:id="@+id/sleepTrackerFragment"
-        android:name="com.example.trackmysleepquality.SleepTrackerFragment"
-        android:label="SleepTrackerFragment"
-        tools:layout="@layout/fragment_sleep_tracker"/>
+        android:id="@+id/sleep_tracker_fragment"
+        android:name="com.example.trackmysleepquality.sleeptracker.SleepTrackerFragment"
+        android:label="@string/sleep_tracker_fragment"
+        tools:layout="@layout/fragment_sleep_tracker" />
 </navigation>
