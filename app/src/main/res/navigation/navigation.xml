@@ -10,4 +10,9 @@
         android:name="com.example.trackmysleepquality.sleeptracker.SleepTrackerFragment"
         android:label="@string/sleep_tracker_fragment"
         tools:layout="@layout/fragment_sleep_tracker" />
+    <fragment
+        android:id="@+id/sleepQualityFragment"
+        android:name="com.example.trackmysleepquality.sleepquality.SleepQualityFragment"
+        android:label="SleepQualityFragment"
+        tools:layout="@layout/fragment_sleep_quality"/>
 </navigation>
