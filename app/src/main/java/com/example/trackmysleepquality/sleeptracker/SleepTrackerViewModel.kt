@@ -4,9 +4,8 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.example.trackmysleepquality.databse.SleepDatabaseDao
 
-class SleepTranckerViewModel (
-    val database : SleepDatabaseDao,
-    application: Application) : AndroidViewModel(application){
+class SleepTranckerViewModel (val database : SleepDatabaseDao, application: Application)
+                                                          :  AndroidViewModel(application){
 
     }
 
