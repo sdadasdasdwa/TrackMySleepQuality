@@ -45,7 +45,7 @@ class SleepTrackerViewModel (val database : SleepDatabaseDao, application: Appli
         database.insert(newNight)
     }
 
-    
+
 
 }
 
