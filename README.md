@@ -21,3 +21,5 @@ Room 会完成所有艰苦的工作，包括获取可存储在 SQLite 表中的 
 
 
 ![img](app/src/main/res/img.png)
+
+The origin document has problems on dependencies. I find that there is Ok when kotlin-gradle version is 1.6.10 and room version is 2.4.3.

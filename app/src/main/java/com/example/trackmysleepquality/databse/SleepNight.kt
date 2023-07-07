@@ -5,22 +5,31 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "daily_sleep_quality_table")
-data class SleepNight (
+@Entity
+data class User(var firstName: String, var lastName: String, var age: Int) {
     @PrimaryKey(autoGenerate = true)
-    var nightId: Long = 0L,
+    var id: Long = 0
+}
+
+@Entity(tableName = "daily_sleep_quality_table")
+data class SleepNight(
+
+    @PrimaryKey(autoGenerate = true)
+    var nightId: Long,
 
     @ColumnInfo(name = "start_time_milli")
-    val startTimeMilli: Long = System.currentTimeMillis(),
+    val startTimeMilli: Long? ,
 
     @ColumnInfo(name = "end_time_milli")
-    var endTimeMilli: Long = startTimeMilli,
+    var endTimeMilli: Long? ,
 
     @ColumnInfo(name = "quality_rating")
-    var sleepQuality: Int = -1
+    var sleepQuality: Int?
+)
 
-) {
-    // 添加一个无参数的构造函数，并使用 @Ignore 注解标记
-    @Ignore
-    constructor() : this(0L, System.currentTimeMillis(), System.currentTimeMillis(), -1)
-}
+
+
+
+
+
+
