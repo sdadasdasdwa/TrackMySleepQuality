@@ -16,7 +16,7 @@ class SleepTrackerViewModel(
     private var tonight = MutableLiveData<SleepNight?>()
 
     // nights用来获取数据库中全部的数据
-    private val nights = database.getAllNights()
+    val nights = database.getAllNights()
     val nightsString = Transformations.map(nights) { nights ->
         formatNights(nights, application.resources)
     }
@@ -120,7 +120,17 @@ class SleepTrackerViewModel(
     }
 
 
+    private val _navigateToSleepDetail = MutableLiveData<Long?>()
+    val navigateToSleepDetail:LiveData<Long?>
+        get() = _navigateToSleepDetail
 
+    fun onSleepNightClicked(id: Long) {
+        _navigateToSleepDetail.value = id
+    }
+
+    fun onSleepDetailNavigated() {
+        _navigateToSleepDetail.value = null
+    }
 
 }
 
